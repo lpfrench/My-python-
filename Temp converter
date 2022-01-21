@@ -1,0 +1,45 @@
+#  tempConvertor
+
+def print_menu():
+    print('1. F to C and Kv')
+    print('2. C to F and KV')
+    print('3. Kv to F and C')
+
+
+t = '{:.5f}'  # Sets how many decimal places to see
+
+def f_c():
+    f = float(input('Enter temp in F'))
+    cel = (float(f)-32)*(5/9)
+    print('This is the temp in Celcius ', t.format(cel))
+    k1 = (float((f)+459.67)*(5/9))
+    print('This is the temp in Kelvin', t.format(k1))
+
+def c_f():
+    c = float(input('Enter temp in C'))
+    fah = (float(c)*(9/5)+32)
+    print('This is the temp in Fahrenheit', t.format(fah))
+    k2 = (float(c)+273.15)
+    print('This is the temp in Kelvin', t.format(k2))
+
+def k_f():
+    kv = float(input('Enter temp in Kv'))
+    fa = (float((kv)*(9/5))-459.67)
+    print('This is the temp in Fahrenheit', t.format(fa))
+    k3 = (float(kv)-273.15)
+    print('This is the temp in C', t.format(k3))
+
+
+if __name__ == '__main__':
+    print_menu()
+    choice = input('''Press 1 for F to C & Kv\n
+                    Press 2 for C to F & Kv\n
+                    Press 3 for Kv to F & C''')
+    if choice == '1':
+        f_c()
+    
+    if choice == '2':
+        c_f()
+    
+    if choice == '3':
+        k_f()
