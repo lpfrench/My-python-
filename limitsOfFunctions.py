@@ -3,9 +3,9 @@ from sympy import *
 
 # Using python to find limit of functions
 # (function, variable, point)
-# the point is f(x) as x->0 in this case, change at y = 
-# f = equation to be used
-# x is the variable
+# the point is f(x) as x->0 in this case, change 0 at y = limit(f,x,0)
+# f = equation to be used, change equation to suit needs
+# x is the variable, Do not change this
 
 # Equation type 1
 x = symbols('x')
